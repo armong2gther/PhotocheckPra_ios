@@ -7,23 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		028B0FFB0775EAC3C7F2765A /* Pods_PhotoCheckPra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D0394951A3AA9A1093907D /* Pods_PhotoCheckPra.framework */; };
+		6E3B10571F2126D3007D7845 /* CheckerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B10561F2126D3007D7845 /* CheckerDetailViewController.swift */; };
+		6E3B105D1F212983007D7845 /* CheckerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B105C1F212983007D7845 /* CheckerTableViewCell.swift */; };
 		6E3C2C941F1E813C0016B8E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2C931F1E813C0016B8E2 /* AppDelegate.swift */; };
-		6E3C2C961F1E813C0016B8E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2C951F1E813C0016B8E2 /* ViewController.swift */; };
 		6E3C2C991F1E813C0016B8E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3C2C971F1E813C0016B8E2 /* Main.storyboard */; };
 		6E3C2C9C1F1E813C0016B8E2 /* PhotoCheckPra.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2C9A1F1E813C0016B8E2 /* PhotoCheckPra.xcdatamodeld */; };
 		6E3C2C9E1F1E813C0016B8E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3C2C9D1F1E813C0016B8E2 /* Assets.xcassets */; };
 		6E3C2CA11F1E813C0016B8E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3C2C9F1F1E813C0016B8E2 /* LaunchScreen.storyboard */; };
+		6E3C2CAE1F1E82B00016B8E2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CAD1F1E82B00016B8E2 /* LoginViewController.swift */; };
+		6E3C2CB11F1E82E60016B8E2 /* FacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CB01F1E82E60016B8E2 /* FacebookLoginViewController.swift */; };
+		6E3C2CB31F1E82F60016B8E2 /* GoogleLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CB21F1E82F60016B8E2 /* GoogleLoginViewController.swift */; };
+		6E3C2CB51F1E830C0016B8E2 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CB41F1E830C0016B8E2 /* RegisterViewController.swift */; };
+		6E3C2CB71F1E83C60016B8E2 /* CheckerManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CB61F1E83C60016B8E2 /* CheckerManageViewController.swift */; };
+		6E3C2CB91F1E840E0016B8E2 /* UserManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CB81F1E840E0016B8E2 /* UserManageViewController.swift */; };
+		6E3C2CBB1F1E84340016B8E2 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CBA1F1E84340016B8E2 /* TransactionViewController.swift */; };
+		6E3C2CBD1F1E84460016B8E2 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CBC1F1E84460016B8E2 /* ReportViewController.swift */; };
+		6E3C2CBF1F1E849D0016B8E2 /* ConsiderationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CBE1F1E849D0016B8E2 /* ConsiderationViewController.swift */; };
+		6E3C2CC11F1E84E40016B8E2 /* PhotoCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CC01F1E84E40016B8E2 /* PhotoCategoryViewController.swift */; };
+		6E3C2CC31F1E84F00016B8E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CC21F1E84F00016B8E2 /* ProfileViewController.swift */; };
+		6E3C2CC51F1E85B10016B8E2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CC41F1E85B10016B8E2 /* FirstViewController.swift */; };
+		6E3C2CC91F1F8DD40016B8E2 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CC81F1F8DD40016B8E2 /* MenuTableViewController.swift */; };
+		6E5D88851F25FBEF00015FD5 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D88841F25FBEF00015FD5 /* UserTableViewCell.swift */; };
+		6E5D88871F26202800015FD5 /* UserMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D88861F26202800015FD5 /* UserMenuTableViewController.swift */; };
+		6E5D88891F26244F00015FD5 /* CheckerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D88881F26244F00015FD5 /* CheckerMenuTableViewController.swift */; };
+		6E5D888B1F26251B00015FD5 /* PhotoSenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D888A1F26251B00015FD5 /* PhotoSenderViewController.swift */; };
+		6E5D888D1F26253200015FD5 /* PhotoStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D888C1F26253200015FD5 /* PhotoStockViewController.swift */; };
+		6E5D88931F27275E00015FD5 /* EditUserCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D88921F27275E00015FD5 /* EditUserCategoryViewController.swift */; };
+		6E5D88951F272BE800015FD5 /* EditUserCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D88941F272BE800015FD5 /* EditUserCategoryTableViewCell.swift */; };
+		6E86DC181F1FB85300553F64 /* SelfSegueStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86DC171F1FB85300553F64 /* SelfSegueStoryboardSegue.swift */; };
+		6E86DC1A1F1FDFC300553F64 /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86DC191F1FDFC300553F64 /* PresentedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2009E5365287D5BBD386E30D /* Pods-PhotoCheckPra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoCheckPra.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoCheckPra/Pods-PhotoCheckPra.debug.xcconfig"; sourceTree = "<group>"; };
+		63D0394951A3AA9A1093907D /* Pods_PhotoCheckPra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoCheckPra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3B10561F2126D3007D7845 /* CheckerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckerDetailViewController.swift; sourceTree = "<group>"; };
+		6E3B105C1F212983007D7845 /* CheckerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckerTableViewCell.swift; sourceTree = "<group>"; };
 		6E3C2C901F1E813C0016B8E2 /* PhotoCheckPra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoCheckPra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E3C2C931F1E813C0016B8E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E3C2C951F1E813C0016B8E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6E3C2C981F1E813C0016B8E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E3C2C9B1F1E813C0016B8E2 /* PhotoCheckPra.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoCheckPra.xcdatamodel; sourceTree = "<group>"; };
 		6E3C2C9D1F1E813C0016B8E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E3C2CA01F1E813C0016B8E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E3C2CA21F1E813C0016B8E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E3C2CAD1F1E82B00016B8E2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6E3C2CB01F1E82E60016B8E2 /* FacebookLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginViewController.swift; sourceTree = "<group>"; };
+		6E3C2CB21F1E82F60016B8E2 /* GoogleLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleLoginViewController.swift; sourceTree = "<group>"; };
+		6E3C2CB41F1E830C0016B8E2 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		6E3C2CB61F1E83C60016B8E2 /* CheckerManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckerManageViewController.swift; sourceTree = "<group>"; };
+		6E3C2CB81F1E840E0016B8E2 /* UserManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManageViewController.swift; sourceTree = "<group>"; };
+		6E3C2CBA1F1E84340016B8E2 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		6E3C2CBC1F1E84460016B8E2 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		6E3C2CBE1F1E849D0016B8E2 /* ConsiderationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsiderationViewController.swift; sourceTree = "<group>"; };
+		6E3C2CC01F1E84E40016B8E2 /* PhotoCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCategoryViewController.swift; sourceTree = "<group>"; };
+		6E3C2CC21F1E84F00016B8E2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		6E3C2CC41F1E85B10016B8E2 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		6E3C2CC81F1F8DD40016B8E2 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		6E5D88841F25FBEF00015FD5 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		6E5D88861F26202800015FD5 /* UserMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMenuTableViewController.swift; sourceTree = "<group>"; };
+		6E5D88881F26244F00015FD5 /* CheckerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckerMenuTableViewController.swift; sourceTree = "<group>"; };
+		6E5D888A1F26251B00015FD5 /* PhotoSenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSenderViewController.swift; sourceTree = "<group>"; };
+		6E5D888C1F26253200015FD5 /* PhotoStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStockViewController.swift; sourceTree = "<group>"; };
+		6E5D88921F27275E00015FD5 /* EditUserCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserCategoryViewController.swift; sourceTree = "<group>"; };
+		6E5D88941F272BE800015FD5 /* EditUserCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		6E86DC171F1FB85300553F64 /* SelfSegueStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSegueStoryboardSegue.swift; sourceTree = "<group>"; };
+		6E86DC191F1FDFC300553F64 /* PresentedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
+		B0F9F7F47C17884538D9BDD1 /* Pods-PhotoCheckPra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoCheckPra.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoCheckPra/Pods-PhotoCheckPra.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +81,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				028B0FFB0775EAC3C7F2765A /* Pods_PhotoCheckPra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E390758C1DE5931704A4665 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2009E5365287D5BBD386E30D /* Pods-PhotoCheckPra.debug.xcconfig */,
+				B0F9F7F47C17884538D9BDD1 /* Pods-PhotoCheckPra.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6E3C2C871F1E813C0016B8E2 = {
 			isa = PBXGroup;
 			children = (
 				6E3C2C921F1E813C0016B8E2 /* PhotoCheckPra */,
 				6E3C2C911F1E813C0016B8E2 /* Products */,
+				5E390758C1DE5931704A4665 /* Pods */,
+				9309392A25CFC19F8ECBAD57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +118,126 @@
 		6E3C2C921F1E813C0016B8E2 /* PhotoCheckPra */ = {
 			isa = PBXGroup;
 			children = (
-				6E3C2C931F1E813C0016B8E2 /* AppDelegate.swift */,
-				6E3C2C951F1E813C0016B8E2 /* ViewController.swift */,
-				6E3C2C971F1E813C0016B8E2 /* Main.storyboard */,
+				6E3C2CAC1F1E81A50016B8E2 /* Supports */,
+				6E3C2CAA1F1E818B0016B8E2 /* Controller */,
+				6E3C2CA91F1E81860016B8E2 /* View */,
+				6E3C2CA81F1E81800016B8E2 /* Model */,
 				6E3C2C9D1F1E813C0016B8E2 /* Assets.xcassets */,
+			);
+			path = PhotoCheckPra;
+			sourceTree = "<group>";
+		};
+		6E3C2CA81F1E81800016B8E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6E3C2CA91F1E81860016B8E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C2C971F1E813C0016B8E2 /* Main.storyboard */,
 				6E3C2C9F1F1E813C0016B8E2 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6E3C2CAA1F1E818B0016B8E2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C2C931F1E813C0016B8E2 /* AppDelegate.swift */,
+				6E3C2CC81F1F8DD40016B8E2 /* MenuTableViewController.swift */,
+				6E5D88861F26202800015FD5 /* UserMenuTableViewController.swift */,
+				6E5D88881F26244F00015FD5 /* CheckerMenuTableViewController.swift */,
+				6E5D88811F226FFD00015FD5 /* AuthController */,
+				6E5D88801F226FD100015FD5 /* MainController */,
+				6E86DC171F1FB85300553F64 /* SelfSegueStoryboardSegue.swift */,
+				6E86DC191F1FDFC300553F64 /* PresentedViewController.swift */,
+				6E5D888E1F26253700015FD5 /* CheckerController */,
+				6E5D888F1F26254700015FD5 /* UserController */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		6E3C2CAC1F1E81A50016B8E2 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
 				6E3C2CA21F1E813C0016B8E2 /* Info.plist */,
 				6E3C2C9A1F1E813C0016B8E2 /* PhotoCheckPra.xcdatamodeld */,
 			);
-			path = PhotoCheckPra;
+			name = Supports;
+			sourceTree = "<group>";
+		};
+		6E5D88801F226FD100015FD5 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C2CC41F1E85B10016B8E2 /* FirstViewController.swift */,
+				6E5D88821F22702800015FD5 /* Checker */,
+				6E5D88831F25FB9C00015FD5 /* User */,
+				6E3C2CBA1F1E84340016B8E2 /* TransactionViewController.swift */,
+				6E3C2CBC1F1E84460016B8E2 /* ReportViewController.swift */,
+				6E3C2CBE1F1E849D0016B8E2 /* ConsiderationViewController.swift */,
+				6E3C2CC01F1E84E40016B8E2 /* PhotoCategoryViewController.swift */,
+				6E3C2CC21F1E84F00016B8E2 /* ProfileViewController.swift */,
+			);
+			name = MainController;
+			sourceTree = "<group>";
+		};
+		6E5D88811F226FFD00015FD5 /* AuthController */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C2CAD1F1E82B00016B8E2 /* LoginViewController.swift */,
+				6E3C2CB01F1E82E60016B8E2 /* FacebookLoginViewController.swift */,
+				6E3C2CB21F1E82F60016B8E2 /* GoogleLoginViewController.swift */,
+				6E3C2CB41F1E830C0016B8E2 /* RegisterViewController.swift */,
+			);
+			name = AuthController;
+			sourceTree = "<group>";
+		};
+		6E5D88821F22702800015FD5 /* Checker */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C2CB61F1E83C60016B8E2 /* CheckerManageViewController.swift */,
+				6E3B10561F2126D3007D7845 /* CheckerDetailViewController.swift */,
+				6E3B105C1F212983007D7845 /* CheckerTableViewCell.swift */,
+				6E5D88921F27275E00015FD5 /* EditUserCategoryViewController.swift */,
+				6E5D88941F272BE800015FD5 /* EditUserCategoryTableViewCell.swift */,
+			);
+			name = Checker;
+			sourceTree = "<group>";
+		};
+		6E5D88831F25FB9C00015FD5 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C2CB81F1E840E0016B8E2 /* UserManageViewController.swift */,
+				6E5D88841F25FBEF00015FD5 /* UserTableViewCell.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		6E5D888E1F26253700015FD5 /* CheckerController */ = {
+			isa = PBXGroup;
+			children = (
+				6E5D888C1F26253200015FD5 /* PhotoStockViewController.swift */,
+			);
+			name = CheckerController;
+			sourceTree = "<group>";
+		};
+		6E5D888F1F26254700015FD5 /* UserController */ = {
+			isa = PBXGroup;
+			children = (
+				6E5D888A1F26251B00015FD5 /* PhotoSenderViewController.swift */,
+			);
+			name = UserController;
+			sourceTree = "<group>";
+		};
+		9309392A25CFC19F8ECBAD57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63D0394951A3AA9A1093907D /* Pods_PhotoCheckPra.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6E3C2CA51F1E813C0016B8E2 /* Build configuration list for PBXNativeTarget "PhotoCheckPra" */;
 			buildPhases = (
+				44321D3FE49999FBFAD4EB93 /* [CP] Check Pods Manifest.lock */,
 				6E3C2C8C1F1E813C0016B8E2 /* Sources */,
 				6E3C2C8D1F1E813C0016B8E2 /* Frameworks */,
 				6E3C2C8E1F1E813C0016B8E2 /* Resources */,
+				CAFEF0CE937D17F9BCA20032 /* [CP] Embed Pods Frameworks */,
+				4CBB225F7AC7ECD278C509DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,14 +311,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44321D3FE49999FBFAD4EB93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4CBB225F7AC7ECD278C509DF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoCheckPra/Pods-PhotoCheckPra-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAFEF0CE937D17F9BCA20032 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoCheckPra/Pods-PhotoCheckPra-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6E3C2C8C1F1E813C0016B8E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E3C2C961F1E813C0016B8E2 /* ViewController.swift in Sources */,
+				6E5D88891F26244F00015FD5 /* CheckerMenuTableViewController.swift in Sources */,
+				6E5D88931F27275E00015FD5 /* EditUserCategoryViewController.swift in Sources */,
+				6E3C2CC51F1E85B10016B8E2 /* FirstViewController.swift in Sources */,
+				6E5D88871F26202800015FD5 /* UserMenuTableViewController.swift in Sources */,
+				6E5D888B1F26251B00015FD5 /* PhotoSenderViewController.swift in Sources */,
+				6E3C2CAE1F1E82B00016B8E2 /* LoginViewController.swift in Sources */,
+				6E3C2CB91F1E840E0016B8E2 /* UserManageViewController.swift in Sources */,
+				6E3C2CC91F1F8DD40016B8E2 /* MenuTableViewController.swift in Sources */,
+				6E5D88951F272BE800015FD5 /* EditUserCategoryTableViewCell.swift in Sources */,
+				6E5D88851F25FBEF00015FD5 /* UserTableViewCell.swift in Sources */,
+				6E3C2CB51F1E830C0016B8E2 /* RegisterViewController.swift in Sources */,
+				6E3B10571F2126D3007D7845 /* CheckerDetailViewController.swift in Sources */,
+				6E3C2CC31F1E84F00016B8E2 /* ProfileViewController.swift in Sources */,
+				6E3C2CBD1F1E84460016B8E2 /* ReportViewController.swift in Sources */,
+				6E3C2CB71F1E83C60016B8E2 /* CheckerManageViewController.swift in Sources */,
+				6E3C2CBB1F1E84340016B8E2 /* TransactionViewController.swift in Sources */,
+				6E5D888D1F26253200015FD5 /* PhotoStockViewController.swift in Sources */,
+				6E3B105D1F212983007D7845 /* CheckerTableViewCell.swift in Sources */,
+				6E3C2CB11F1E82E60016B8E2 /* FacebookLoginViewController.swift in Sources */,
+				6E86DC1A1F1FDFC300553F64 /* PresentedViewController.swift in Sources */,
 				6E3C2C9C1F1E813C0016B8E2 /* PhotoCheckPra.xcdatamodeld in Sources */,
 				6E3C2C941F1E813C0016B8E2 /* AppDelegate.swift in Sources */,
+				6E3C2CB31F1E82F60016B8E2 /* GoogleLoginViewController.swift in Sources */,
+				6E3C2CBF1F1E849D0016B8E2 /* ConsiderationViewController.swift in Sources */,
+				6E86DC181F1FB85300553F64 /* SelfSegueStoryboardSegue.swift in Sources */,
+				6E3C2CC11F1E84E40016B8E2 /* PhotoCategoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +510,7 @@
 		};
 		6E3C2CA61F1E813C0016B8E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2009E5365287D5BBD386E30D /* Pods-PhotoCheckPra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5QD52GEJS3;
@@ -276,6 +524,7 @@
 		};
 		6E3C2CA71F1E813C0016B8E2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F9F7F47C17884538D9BDD1 /* Pods-PhotoCheckPra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5QD52GEJS3;
@@ -306,6 +555,7 @@
 				6E3C2CA71F1E813C0016B8E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
