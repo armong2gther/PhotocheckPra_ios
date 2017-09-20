@@ -68,7 +68,10 @@ class MenuTableViewController: UITableViewController {
                 print("logout")
                 //self.performSegue(withIdentifier: "unwindToDestinationViewControllerWithSender", sender: self)
                 //gotoDest(dest: "FirstView")
-                //dismiss(animated: true, completion: nil)
+//                dismiss(animated: true, completion: nil)
+//                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let viewController = mainStoryboard.instantiateViewController(withIdentifier: "FirstView") as! UIViewController
+//                UIApplication.shared.keyWindow?.rootViewController = viewController
             }
         }
         //dismiss(animated: true, completion: nil)
@@ -76,7 +79,7 @@ class MenuTableViewController: UITableViewController {
     
     func gotoDest(dest: String){
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: dest) as UIViewController
-        self.present(viewController, animated: true, completion: nil)
+        self.present(viewController, animated: false, completion: nil)
     }
 
     // MARK: - Table view data source

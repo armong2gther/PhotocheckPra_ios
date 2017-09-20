@@ -15,8 +15,8 @@ class PhotoStockViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSideMenu()
-        setDefaults()
+        //setupSideMenu()
+        //setDefaults()
         // Do any additional setup after loading the view.
     }
 
@@ -39,6 +39,10 @@ class PhotoStockViewController: UIViewController {
     fileprivate func setDefaults() {
         let styles:UIBlurEffectStyle = .light//[.dark, .light, .extraLight]
         SideMenuManager.menuBlurEffectStyle = styles
+    }
+    
+    @IBAction func showMenu(_ sender: Any) {
+        present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
     }
 
     /*

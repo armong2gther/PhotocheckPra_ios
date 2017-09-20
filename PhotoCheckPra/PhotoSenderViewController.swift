@@ -11,13 +11,42 @@ import SideMenu
 import Alamofire
 import SwiftyJSON
 
-class PhotoSenderViewController: UIViewController {
+class PhotoSenderViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
+    var album_list:JSON?
+    
+    @IBOutlet weak var useralbumTableview: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSideMenu()
-        setDefaults()
+        //setupSideMenu()
+        //setDefaults()
+        self.reloadData()
+//        useralbumTableview.dataSource = self
+//        useralbumTableview.delegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    func reloadData(){
+        self.getAlbum(url: "\(HOSTING_URL)get_my_photo.php")
+    }
+    
+    func getAlbum(url: String){
+        Alamofire.request(url, method: .post,parameters: ["userid":"21"]).responseJSON {
+            response in
+            if response.result.isSuccess {
+                print("Load Album Success!")
+                self.album_list = JSON(response.result.value!)
+                self.useralbumTableview.reloadData()
+            } else {
+                print("Error \(response.result.error)")
+            }
+        }
+    }
+    
+    @IBAction func unwindToPhotoAlbum (sender: UIStoryboardSegue){
+        self.reloadData()
+        print("back to PhotoAlbum")
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,9 +65,60 @@ class PhotoSenderViewController: UIViewController {
         SideMenuManager.menuAnimationBackgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(self.album_list == nil){
+            return 0
+        }else{
+            return self.album_list!.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let each_cell = tableView.dequeueReusableCell(withIdentifier: "albumlistCell") as! PhotoAlbumTableViewCell
+        
+        if(album_list != nil){
+            let each_album = self.album_list?[indexPath.row].dictionaryObject as! [String:String]
+            //print(each_album)
+            each_cell.albumName.text = each_album["pra_name"]
+            each_cell.albumDatetime.text = each_album["pra_date_add"]
+            each_cell.albumCategory.text = each_album["cat_name"]
+            let praStatus = each_album["pra_status"]
+            var s:String = " [รอการตรวจสอบ]"
+            if (praStatus == "draf") {
+                s = " [ร่าง]";
+            } else if (praStatus == "send") {
+                s = " [รอตรวจสอบ]";
+            } else if (praStatus == "1") {
+                s = " [แท้]";
+            } else if (praStatus == "2") {
+                s = " [ปลอม]";
+            } else if (praStatus == "3") {
+                s = " [ขอโหวต]";
+            } else if (praStatus == "4") {
+                s = " [ส่งตรวจสอบ]";
+            }
+            each_cell.albumStatus.text = s
+            if let url = NSURL(string: "\(UPLOAD_URL)\(each_album["pra_thumn"]!)") {
+                if let data = NSData(contentsOf: url as URL) {
+                    each_cell.photoAlbumPic.image = UIImage(data: data as Data)
+                }
+            }
+            each_cell.albumInfo = each_album
+        }
+        return each_cell
+    }
+    
     fileprivate func setDefaults() {
         let styles:UIBlurEffectStyle = .light//[.dark, .light, .extraLight]
         SideMenuManager.menuBlurEffectStyle = styles
+    }
+    
+    @IBAction func showMenu(_ sender: Any) {
+        present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
+    }
+    
+    @IBAction func newAlbum(_ sender: Any) {
+        self.performSegue(withIdentifier: "createNewAlbum", sender: self)
     }
 
     /*

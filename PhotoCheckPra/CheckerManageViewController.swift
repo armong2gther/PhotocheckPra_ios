@@ -22,8 +22,8 @@ class CheckerManageViewController: UIViewController,UITableViewDataSource,UITabl
         super.viewDidLoad()
         
         reloadData()
-        setupSideMenu()
-        setDefaults()
+        
+        // setDefaults()
         // for running all cell -------
         tableview.dataSource = self
         tableview.delegate = self
@@ -36,7 +36,7 @@ class CheckerManageViewController: UIViewController,UITableViewDataSource,UITabl
     
     func reloadData(){
         self.getCheckerList(url: HOSTING_URL+"get_member_list.php", parameters: ["member_status" : "P"])
-        self.tableview.reloadData()
+//        self.tableview.reloadData()
     }
     
     func getCheckerList(url: String, parameters: [String: String]){
@@ -73,6 +73,7 @@ class CheckerManageViewController: UIViewController,UITableViewDataSource,UITabl
         
         // Set up a cool background image for demo purposes
         SideMenuManager.menuAnimationBackgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        
     }
     
     fileprivate func setDefaults() {

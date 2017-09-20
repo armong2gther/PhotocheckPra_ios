@@ -10,6 +10,7 @@ import UIKit
 import AnimatedTextInput
 import Alamofire
 import SwiftyJSON
+import SideMenu
 
 class LoginViewController: UIViewController {
     
@@ -50,13 +51,26 @@ class LoginViewController: UIViewController {
         
         password.placeHolderText = "Password"
         password.type = .password(toggleable: true)
+        
+        setupSideMenu()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    fileprivate func setupSideMenu() {
+        // Define the menus
+        // MainMenuNavigation
+        SideMenuManager.menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "MainMenuNavigation") as? UISideMenuNavigationController
+        SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        
+        // Set up a cool background image for demo purposes
+        SideMenuManager.menuAnimationBackgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
+        
+    }
+
     @IBAction func checkLogin(_ sender: Any) {
         print("check login")
         let param:[String:String] = ["email":username.text!,"password":password.text!]

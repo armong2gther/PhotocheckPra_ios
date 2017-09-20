@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		028B0FFB0775EAC3C7F2765A /* Pods_PhotoCheckPra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D0394951A3AA9A1093907D /* Pods_PhotoCheckPra.framework */; };
+		6E122F1E1F282ECD00E01E60 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F1D1F282ECD00E01E60 /* TransactionDetailViewController.swift */; };
+		6E122F211F28510000E01E60 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F201F28510000E01E60 /* ReportTableViewCell.swift */; };
+		6E122F231F2868F000E01E60 /* PhotoOverDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F221F2868F000E01E60 /* PhotoOverDayViewController.swift */; };
+		6E122F261F28692100E01E60 /* PhotoOverDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F251F28692100E01E60 /* PhotoOverDayTableViewCell.swift */; };
+		6E122F281F286B4F00E01E60 /* PhotoOverDayDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F271F286B4F00E01E60 /* PhotoOverDayDetailViewController.swift */; };
+		6E122F2A1F288C6700E01E60 /* PhotoOverDayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F291F288C6700E01E60 /* PhotoOverDayCollectionViewCell.swift */; };
+		6E122F2C1F28BEDF00E01E60 /* NotifyBankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F2B1F28BEDF00E01E60 /* NotifyBankViewController.swift */; };
+		6E122F2F1F28BFAE00E01E60 /* NotifyBankDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F2E1F28BFAE00E01E60 /* NotifyBankDetailViewController.swift */; };
 		6E3B10571F2126D3007D7845 /* CheckerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B10561F2126D3007D7845 /* CheckerDetailViewController.swift */; };
 		6E3B105D1F212983007D7845 /* CheckerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B105C1F212983007D7845 /* CheckerTableViewCell.swift */; };
 		6E3C2C941F1E813C0016B8E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2C931F1E813C0016B8E2 /* AppDelegate.swift */; };
@@ -28,20 +36,38 @@
 		6E3C2CC31F1E84F00016B8E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CC21F1E84F00016B8E2 /* ProfileViewController.swift */; };
 		6E3C2CC51F1E85B10016B8E2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CC41F1E85B10016B8E2 /* FirstViewController.swift */; };
 		6E3C2CC91F1F8DD40016B8E2 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3C2CC81F1F8DD40016B8E2 /* MenuTableViewController.swift */; };
+		6E523F2C1F27B33100CB3D78 /* PhotoCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E523F2B1F27B33100CB3D78 /* PhotoCategoryTableViewCell.swift */; };
+		6E523F2F1F27CCDD00CB3D78 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E523F2E1F27CCDD00CB3D78 /* TransactionTableViewCell.swift */; };
 		6E5D88851F25FBEF00015FD5 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D88841F25FBEF00015FD5 /* UserTableViewCell.swift */; };
 		6E5D88871F26202800015FD5 /* UserMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D88861F26202800015FD5 /* UserMenuTableViewController.swift */; };
 		6E5D88891F26244F00015FD5 /* CheckerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D88881F26244F00015FD5 /* CheckerMenuTableViewController.swift */; };
 		6E5D888B1F26251B00015FD5 /* PhotoSenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D888A1F26251B00015FD5 /* PhotoSenderViewController.swift */; };
 		6E5D888D1F26253200015FD5 /* PhotoStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D888C1F26253200015FD5 /* PhotoStockViewController.swift */; };
-		6E5D88931F27275E00015FD5 /* EditUserCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D88921F27275E00015FD5 /* EditUserCategoryViewController.swift */; };
-		6E5D88951F272BE800015FD5 /* EditUserCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5D88941F272BE800015FD5 /* EditUserCategoryTableViewCell.swift */; };
 		6E86DC181F1FB85300553F64 /* SelfSegueStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86DC171F1FB85300553F64 /* SelfSegueStoryboardSegue.swift */; };
 		6E86DC1A1F1FDFC300553F64 /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E86DC191F1FDFC300553F64 /* PresentedViewController.swift */; };
+		6EA359A91F39989800038232 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA359A81F39989800038232 /* UserProfileViewController.swift */; };
+		6EA359AE1F39A5D700038232 /* PhotoAlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA359AD1F39A5D700038232 /* PhotoAlbumTableViewCell.swift */; };
+		6EA359B21F39B04200038232 /* CreateNewAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA359B11F39B04200038232 /* CreateNewAlbumViewController.swift */; };
+		6EA359B91F39C0E700038232 /* PhotoStockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA359B81F39C0E700038232 /* PhotoStockTableViewCell.swift */; };
+		6EA359BB1F39C10A00038232 /* VotePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA359BA1F39C10A00038232 /* VotePhotoViewController.swift */; };
+		6EA359BD1F39C11E00038232 /* ReviewedPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA359BC1F39C11E00038232 /* ReviewedPhotoViewController.swift */; };
+		6EA359BF1F39C13000038232 /* StatsReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA359BE1F39C13000038232 /* StatsReportViewController.swift */; };
+		6EA359C11F39C14500038232 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA359C01F39C14500038232 /* PersonDetailViewController.swift */; };
+		6EA359C31F39C16500038232 /* VotePhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA359C21F39C16500038232 /* VotePhotoTableViewCell.swift */; };
+		6EA359C51F39C17400038232 /* ReviewedPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA359C41F39C17400038232 /* ReviewedPhotoTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2009E5365287D5BBD386E30D /* Pods-PhotoCheckPra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoCheckPra.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoCheckPra/Pods-PhotoCheckPra.debug.xcconfig"; sourceTree = "<group>"; };
 		63D0394951A3AA9A1093907D /* Pods_PhotoCheckPra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoCheckPra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E122F1D1F282ECD00E01E60 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
+		6E122F201F28510000E01E60 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		6E122F221F2868F000E01E60 /* PhotoOverDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoOverDayViewController.swift; sourceTree = "<group>"; };
+		6E122F251F28692100E01E60 /* PhotoOverDayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoOverDayTableViewCell.swift; sourceTree = "<group>"; };
+		6E122F271F286B4F00E01E60 /* PhotoOverDayDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoOverDayDetailViewController.swift; sourceTree = "<group>"; };
+		6E122F291F288C6700E01E60 /* PhotoOverDayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoOverDayCollectionViewCell.swift; sourceTree = "<group>"; };
+		6E122F2B1F28BEDF00E01E60 /* NotifyBankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyBankViewController.swift; sourceTree = "<group>"; };
+		6E122F2E1F28BFAE00E01E60 /* NotifyBankDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyBankDetailViewController.swift; sourceTree = "<group>"; };
 		6E3B10561F2126D3007D7845 /* CheckerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckerDetailViewController.swift; sourceTree = "<group>"; };
 		6E3B105C1F212983007D7845 /* CheckerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckerTableViewCell.swift; sourceTree = "<group>"; };
 		6E3C2C901F1E813C0016B8E2 /* PhotoCheckPra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoCheckPra.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,15 +90,25 @@
 		6E3C2CC21F1E84F00016B8E2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6E3C2CC41F1E85B10016B8E2 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		6E3C2CC81F1F8DD40016B8E2 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		6E523F2B1F27B33100CB3D78 /* PhotoCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		6E523F2E1F27CCDD00CB3D78 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		6E5D88841F25FBEF00015FD5 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		6E5D88861F26202800015FD5 /* UserMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMenuTableViewController.swift; sourceTree = "<group>"; };
 		6E5D88881F26244F00015FD5 /* CheckerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckerMenuTableViewController.swift; sourceTree = "<group>"; };
 		6E5D888A1F26251B00015FD5 /* PhotoSenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSenderViewController.swift; sourceTree = "<group>"; };
 		6E5D888C1F26253200015FD5 /* PhotoStockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStockViewController.swift; sourceTree = "<group>"; };
-		6E5D88921F27275E00015FD5 /* EditUserCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserCategoryViewController.swift; sourceTree = "<group>"; };
-		6E5D88941F272BE800015FD5 /* EditUserCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		6E86DC171F1FB85300553F64 /* SelfSegueStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfSegueStoryboardSegue.swift; sourceTree = "<group>"; };
 		6E86DC191F1FDFC300553F64 /* PresentedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
+		6EA359A81F39989800038232 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		6EA359AD1F39A5D700038232 /* PhotoAlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoAlbumTableViewCell.swift; sourceTree = "<group>"; };
+		6EA359B11F39B04200038232 /* CreateNewAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewAlbumViewController.swift; sourceTree = "<group>"; };
+		6EA359B81F39C0E700038232 /* PhotoStockTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStockTableViewCell.swift; sourceTree = "<group>"; };
+		6EA359BA1F39C10A00038232 /* VotePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VotePhotoViewController.swift; sourceTree = "<group>"; };
+		6EA359BC1F39C11E00038232 /* ReviewedPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewedPhotoViewController.swift; sourceTree = "<group>"; };
+		6EA359BE1F39C13000038232 /* StatsReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsReportViewController.swift; sourceTree = "<group>"; };
+		6EA359C01F39C14500038232 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		6EA359C21F39C16500038232 /* VotePhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VotePhotoTableViewCell.swift; sourceTree = "<group>"; };
+		6EA359C41F39C17400038232 /* ReviewedPhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewedPhotoTableViewCell.swift; sourceTree = "<group>"; };
 		B0F9F7F47C17884538D9BDD1 /* Pods-PhotoCheckPra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoCheckPra.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoCheckPra/Pods-PhotoCheckPra.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +131,35 @@
 				B0F9F7F47C17884538D9BDD1 /* Pods-PhotoCheckPra.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E122F1F1F2850E300E01E60 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C2CBC1F1E84460016B8E2 /* ReportViewController.swift */,
+				6E122F201F28510000E01E60 /* ReportTableViewCell.swift */,
+			);
+			name = Report;
+			sourceTree = "<group>";
+		};
+		6E122F241F28690100E01E60 /* PhotoOverDay */ = {
+			isa = PBXGroup;
+			children = (
+				6E122F221F2868F000E01E60 /* PhotoOverDayViewController.swift */,
+				6E122F271F286B4F00E01E60 /* PhotoOverDayDetailViewController.swift */,
+				6E122F251F28692100E01E60 /* PhotoOverDayTableViewCell.swift */,
+				6E122F291F288C6700E01E60 /* PhotoOverDayCollectionViewCell.swift */,
+			);
+			name = PhotoOverDay;
+			sourceTree = "<group>";
+		};
+		6E122F2D1F28BF9600E01E60 /* NotifyBank */ = {
+			isa = PBXGroup;
+			children = (
+				6E122F2B1F28BEDF00E01E60 /* NotifyBankViewController.swift */,
+				6E122F2E1F28BFAE00E01E60 /* NotifyBankDetailViewController.swift */,
+			);
+			name = NotifyBank;
 			sourceTree = "<group>";
 		};
 		6E3C2C871F1E813C0016B8E2 = {
@@ -169,17 +234,37 @@
 			name = Supports;
 			sourceTree = "<group>";
 		};
+		6E523F2A1F27B2D500CB3D78 /* PhotoCategory */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C2CC01F1E84E40016B8E2 /* PhotoCategoryViewController.swift */,
+				6E523F2B1F27B33100CB3D78 /* PhotoCategoryTableViewCell.swift */,
+			);
+			name = PhotoCategory;
+			sourceTree = "<group>";
+		};
+		6E523F2D1F27CCC900CB3D78 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				6E3C2CBA1F1E84340016B8E2 /* TransactionViewController.swift */,
+				6E122F1D1F282ECD00E01E60 /* TransactionDetailViewController.swift */,
+				6E523F2E1F27CCDD00CB3D78 /* TransactionTableViewCell.swift */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
 		6E5D88801F226FD100015FD5 /* MainController */ = {
 			isa = PBXGroup;
 			children = (
 				6E3C2CC41F1E85B10016B8E2 /* FirstViewController.swift */,
 				6E5D88821F22702800015FD5 /* Checker */,
 				6E5D88831F25FB9C00015FD5 /* User */,
-				6E3C2CBA1F1E84340016B8E2 /* TransactionViewController.swift */,
-				6E3C2CBC1F1E84460016B8E2 /* ReportViewController.swift */,
+				6E523F2D1F27CCC900CB3D78 /* Transaction */,
+				6E122F1F1F2850E300E01E60 /* Report */,
 				6E3C2CBE1F1E849D0016B8E2 /* ConsiderationViewController.swift */,
-				6E3C2CC01F1E84E40016B8E2 /* PhotoCategoryViewController.swift */,
+				6E523F2A1F27B2D500CB3D78 /* PhotoCategory */,
 				6E3C2CC21F1E84F00016B8E2 /* ProfileViewController.swift */,
+				6E122F241F28690100E01E60 /* PhotoOverDay */,
 			);
 			name = MainController;
 			sourceTree = "<group>";
@@ -201,8 +286,6 @@
 				6E3C2CB61F1E83C60016B8E2 /* CheckerManageViewController.swift */,
 				6E3B10561F2126D3007D7845 /* CheckerDetailViewController.swift */,
 				6E3B105C1F212983007D7845 /* CheckerTableViewCell.swift */,
-				6E5D88921F27275E00015FD5 /* EditUserCategoryViewController.swift */,
-				6E5D88941F272BE800015FD5 /* EditUserCategoryTableViewCell.swift */,
 			);
 			name = Checker;
 			sourceTree = "<group>";
@@ -219,7 +302,11 @@
 		6E5D888E1F26253700015FD5 /* CheckerController */ = {
 			isa = PBXGroup;
 			children = (
-				6E5D888C1F26253200015FD5 /* PhotoStockViewController.swift */,
+				6EA359B71F39C07E00038232 /* PersonDetail */,
+				6EA359B61F39C06B00038232 /* StatsReport */,
+				6EA359B51F39C05C00038232 /* ReviewedPhoto */,
+				6EA359B41F39C05100038232 /* VotePhoto */,
+				6EA359B31F39C04200038232 /* PhotoStock */,
 			);
 			name = CheckerController;
 			sourceTree = "<group>";
@@ -227,9 +314,64 @@
 		6E5D888F1F26254700015FD5 /* UserController */ = {
 			isa = PBXGroup;
 			children = (
-				6E5D888A1F26251B00015FD5 /* PhotoSenderViewController.swift */,
+				6E122F2D1F28BF9600E01E60 /* NotifyBank */,
+				6EA359AA1F39A5A300038232 /* PhotoAlbum */,
+				6EA359A81F39989800038232 /* UserProfileViewController.swift */,
 			);
 			name = UserController;
+			sourceTree = "<group>";
+		};
+		6EA359AA1F39A5A300038232 /* PhotoAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				6E5D888A1F26251B00015FD5 /* PhotoSenderViewController.swift */,
+				6EA359AD1F39A5D700038232 /* PhotoAlbumTableViewCell.swift */,
+				6EA359B11F39B04200038232 /* CreateNewAlbumViewController.swift */,
+			);
+			name = PhotoAlbum;
+			sourceTree = "<group>";
+		};
+		6EA359B31F39C04200038232 /* PhotoStock */ = {
+			isa = PBXGroup;
+			children = (
+				6E5D888C1F26253200015FD5 /* PhotoStockViewController.swift */,
+				6EA359B81F39C0E700038232 /* PhotoStockTableViewCell.swift */,
+			);
+			name = PhotoStock;
+			sourceTree = "<group>";
+		};
+		6EA359B41F39C05100038232 /* VotePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				6EA359BA1F39C10A00038232 /* VotePhotoViewController.swift */,
+				6EA359C21F39C16500038232 /* VotePhotoTableViewCell.swift */,
+			);
+			name = VotePhoto;
+			sourceTree = "<group>";
+		};
+		6EA359B51F39C05C00038232 /* ReviewedPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				6EA359BC1F39C11E00038232 /* ReviewedPhotoViewController.swift */,
+				6EA359C41F39C17400038232 /* ReviewedPhotoTableViewCell.swift */,
+			);
+			name = ReviewedPhoto;
+			sourceTree = "<group>";
+		};
+		6EA359B61F39C06B00038232 /* StatsReport */ = {
+			isa = PBXGroup;
+			children = (
+				6EA359BE1F39C13000038232 /* StatsReportViewController.swift */,
+			);
+			name = StatsReport;
+			sourceTree = "<group>";
+		};
+		6EA359B71F39C07E00038232 /* PersonDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6EA359C01F39C14500038232 /* PersonDetailViewController.swift */,
+			);
+			name = PersonDetail;
 			sourceTree = "<group>";
 		};
 		9309392A25CFC19F8ECBAD57 /* Frameworks */ = {
@@ -365,31 +507,49 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5D88891F26244F00015FD5 /* CheckerMenuTableViewController.swift in Sources */,
-				6E5D88931F27275E00015FD5 /* EditUserCategoryViewController.swift in Sources */,
+				6E122F281F286B4F00E01E60 /* PhotoOverDayDetailViewController.swift in Sources */,
+				6EA359B21F39B04200038232 /* CreateNewAlbumViewController.swift in Sources */,
 				6E3C2CC51F1E85B10016B8E2 /* FirstViewController.swift in Sources */,
 				6E5D88871F26202800015FD5 /* UserMenuTableViewController.swift in Sources */,
 				6E5D888B1F26251B00015FD5 /* PhotoSenderViewController.swift in Sources */,
 				6E3C2CAE1F1E82B00016B8E2 /* LoginViewController.swift in Sources */,
 				6E3C2CB91F1E840E0016B8E2 /* UserManageViewController.swift in Sources */,
+				6E523F2F1F27CCDD00CB3D78 /* TransactionTableViewCell.swift in Sources */,
 				6E3C2CC91F1F8DD40016B8E2 /* MenuTableViewController.swift in Sources */,
-				6E5D88951F272BE800015FD5 /* EditUserCategoryTableViewCell.swift in Sources */,
 				6E5D88851F25FBEF00015FD5 /* UserTableViewCell.swift in Sources */,
+				6E122F2A1F288C6700E01E60 /* PhotoOverDayCollectionViewCell.swift in Sources */,
+				6E122F2C1F28BEDF00E01E60 /* NotifyBankViewController.swift in Sources */,
+				6EA359BB1F39C10A00038232 /* VotePhotoViewController.swift in Sources */,
+				6EA359C51F39C17400038232 /* ReviewedPhotoTableViewCell.swift in Sources */,
+				6E122F2F1F28BFAE00E01E60 /* NotifyBankDetailViewController.swift in Sources */,
 				6E3C2CB51F1E830C0016B8E2 /* RegisterViewController.swift in Sources */,
 				6E3B10571F2126D3007D7845 /* CheckerDetailViewController.swift in Sources */,
 				6E3C2CC31F1E84F00016B8E2 /* ProfileViewController.swift in Sources */,
+				6EA359A91F39989800038232 /* UserProfileViewController.swift in Sources */,
 				6E3C2CBD1F1E84460016B8E2 /* ReportViewController.swift in Sources */,
+				6E122F1E1F282ECD00E01E60 /* TransactionDetailViewController.swift in Sources */,
+				6E122F231F2868F000E01E60 /* PhotoOverDayViewController.swift in Sources */,
 				6E3C2CB71F1E83C60016B8E2 /* CheckerManageViewController.swift in Sources */,
+				6E523F2C1F27B33100CB3D78 /* PhotoCategoryTableViewCell.swift in Sources */,
+				6EA359AE1F39A5D700038232 /* PhotoAlbumTableViewCell.swift in Sources */,
 				6E3C2CBB1F1E84340016B8E2 /* TransactionViewController.swift in Sources */,
+				6EA359C11F39C14500038232 /* PersonDetailViewController.swift in Sources */,
 				6E5D888D1F26253200015FD5 /* PhotoStockViewController.swift in Sources */,
 				6E3B105D1F212983007D7845 /* CheckerTableViewCell.swift in Sources */,
+				6E122F211F28510000E01E60 /* ReportTableViewCell.swift in Sources */,
+				6E122F261F28692100E01E60 /* PhotoOverDayTableViewCell.swift in Sources */,
 				6E3C2CB11F1E82E60016B8E2 /* FacebookLoginViewController.swift in Sources */,
+				6EA359BF1F39C13000038232 /* StatsReportViewController.swift in Sources */,
 				6E86DC1A1F1FDFC300553F64 /* PresentedViewController.swift in Sources */,
+				6EA359BD1F39C11E00038232 /* ReviewedPhotoViewController.swift in Sources */,
 				6E3C2C9C1F1E813C0016B8E2 /* PhotoCheckPra.xcdatamodeld in Sources */,
 				6E3C2C941F1E813C0016B8E2 /* AppDelegate.swift in Sources */,
 				6E3C2CB31F1E82F60016B8E2 /* GoogleLoginViewController.swift in Sources */,
 				6E3C2CBF1F1E849D0016B8E2 /* ConsiderationViewController.swift in Sources */,
 				6E86DC181F1FB85300553F64 /* SelfSegueStoryboardSegue.swift in Sources */,
 				6E3C2CC11F1E84E40016B8E2 /* PhotoCategoryViewController.swift in Sources */,
+				6EA359B91F39C0E700038232 /* PhotoStockTableViewCell.swift in Sources */,
+				6EA359C31F39C16500038232 /* VotePhotoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

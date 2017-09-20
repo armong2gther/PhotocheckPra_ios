@@ -11,6 +11,7 @@ import IQKeyboardManagerSwift
 import CoreData
 
 let HOSTING_URL = "http://o.rmu.ac.th/checkpra/"
+let UPLOAD_URL = "http://o.rmu.ac.th/checkpra/bankref/"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

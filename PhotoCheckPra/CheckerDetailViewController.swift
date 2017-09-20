@@ -21,10 +21,6 @@ class CheckerDetailViewController: UIViewController, CheckboxDialogViewDelegate 
     
     var checkboxDialogViewController: CheckboxDialogViewController!
     
-    //define typealias-es
-//    typealias TranslationTuple = (name: String, translated: String)
-//    typealias TranslationDictionary = [String : String]
-    
     var innerUserInfo:[String:String]?
     var userCate:JSON?
     
@@ -59,12 +55,6 @@ class CheckerDetailViewController: UIViewController, CheckboxDialogViewDelegate 
     }
     
     @IBAction func saveEdit(_ sender: Any) {
-        /*
-         member_id
-         member_email
-         member_fullname
-         member_tel
-         */
         let params:[String:String] = ["member_id":innerUserInfo!["member_id"]!,"member_email":email_inp.text!,"member_fullname":name_inp.text!,"member_tel":phone_inp.text!]
         Alamofire.request("\(HOSTING_URL)save_edit_member.php", method: .post, parameters: params).responseJSON {
             response in
@@ -96,31 +86,20 @@ class CheckerDetailViewController: UIViewController, CheckboxDialogViewDelegate 
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "usercategory"){
-            print("--> prepare usercategory")
-            if let toViewController = segue.destination as? EditUserCategoryViewController {
-                toViewController.user_id = innerUserInfo?["member_id"]
-                //myDate = DateFormatter.localizedString(from: dateOutlet.date, dateStyle: DateFormatter.Style.none, timeStyle: DateFormatter.Style.short)
-            }
-        }
-    }
-    
     @IBAction func categoryChange(_ sender: UIButton) {
-        // this tuple has translated key because it can use localized values in case app needs to be localized
         self.getUserCategory(url: "\(HOSTING_URL)get_member_category.php",parameters: ["member_id":(innerUserInfo?["member_id"])!])
     }
     
     func onCheckboxPickerValueChange(_ component: DialogCheckboxViewEnum, values: TranslationDictionary,isConfirm:Bool) {
-        var selected:String = ""
-        for each in values {
-            if (selected == "") {
-                selected = "\(each.key)"
-            } else {
-                selected = "\(selected),\(each.key)"
-            }
-        }
         if(isConfirm){
+            var selected:String = ""
+            for each in values {
+                if (selected == "") {
+                    selected = "\(each.key)"
+                } else {
+                    selected = "\(selected),\(each.key)"
+                }
+            }
             let params = [ "cat_list":selected, "member_id":(innerUserInfo?["member_id"])! ]
             self.sendCategoryUpdate(url: "\(HOSTING_URL)save_person_category.php",parameters: params)
         }
@@ -159,7 +138,6 @@ class CheckerDetailViewController: UIViewController, CheckboxDialogViewDelegate 
         for tmp in (userCate?.array)!  {
             let dt = tmp.dictionaryObject as! [String:String]
             answer.append((dt["cat_id"]!,dt["cat_name"]!))
-//            print("cate name : \(foo)")
         }
         return answer
     }
@@ -170,7 +148,6 @@ class CheckerDetailViewController: UIViewController, CheckboxDialogViewDelegate 
             let dt = tmp.dictionaryObject as! [String:String]
             if(dt["cat_chk"] == "true"){
                 answer.append((dt["cat_id"]!, dt["cat_name"]!))
-//                print("cate chk : \(fo)")
             }
         }
         return answer
