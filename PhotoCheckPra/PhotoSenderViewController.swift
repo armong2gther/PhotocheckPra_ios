@@ -10,6 +10,11 @@ import UIKit
 import SideMenu
 import Alamofire
 import SwiftyJSON
+import FacebookCore
+import FacebookLogin
+import Firebase
+import FirebaseAuth
+import GoogleSignIn
 
 class PhotoSenderViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
@@ -19,12 +24,26 @@ class PhotoSenderViewController: UIViewController,UITableViewDataSource,UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupSideMenu()
+        
+        self.title = "USER"
+        self.navigationController?.isNavigationBarHidden = false
+        
+        
+        setupSideMenu()
         //setDefaults()
         self.reloadData()
 //        useralbumTableview.dataSource = self
 //        useralbumTableview.delegate = self
         // Do any additional setup after loading the view.
+        
+        if let vc = SideMenuManager.menuLeftNavigationController?.viewControllers[0] as? UserMenuTableViewController
+        {
+            vc.delegate = self
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     func reloadData(){
@@ -39,7 +58,7 @@ class PhotoSenderViewController: UIViewController,UITableViewDataSource,UITableV
                 self.album_list = JSON(response.result.value!)
                 self.useralbumTableview.reloadData()
             } else {
-                print("Error \(response.result.error)")
+                print("Error \(String(describing: response.result.error))")
             }
         }
     }
@@ -60,6 +79,8 @@ class PhotoSenderViewController: UIViewController,UITableViewDataSource,UITableV
         SideMenuManager.menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "UserMenuNavigation") as? UISideMenuNavigationController
         SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
         SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        
+       
         
         // Set up a cool background image for demo purposes
         SideMenuManager.menuAnimationBackgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
@@ -130,5 +151,38 @@ class PhotoSenderViewController: UIViewController,UITableViewDataSource,UITableV
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func logoutApp()
+    {
+        // ต้อง clear token facebook google
+        
+        let loginManager = LoginManager()
+        loginManager.logOut()
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        if let topController = self.parent
+        {
+            if let nc = topController as? UINavigationController
+            {
+                nc.popToRootViewController(animated: true)
+            }
+            
+        }
+    }
 
+}
+
+extension PhotoSenderViewController: UserMenuTableViewControllerDeleagte
+{
+    
+    func selectLogoutApp()
+    {
+        logoutApp()
+    }
 }

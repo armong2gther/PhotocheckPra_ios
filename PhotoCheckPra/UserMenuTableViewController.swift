@@ -8,8 +8,14 @@
 
 import UIKit
 
+
+protocol UserMenuTableViewControllerDeleagte {
+    func selectLogoutApp()
+}
+
 class UserMenuTableViewController: UITableViewController {
 
+    var delegate: UserMenuTableViewControllerDeleagte?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
@@ -20,14 +26,19 @@ class UserMenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+       
         if(indexPath.section == 1){
             if(indexPath.row == 3){
                 print("user : logout")
-                dismiss(animated: true, completion: nil)
-                //gotoDest(dest: "FirstView")
+                if delegate != nil
+                {
+                    delegate?.selectLogoutApp()
+                }
             }
         }
     }
+    
     
     func gotoDest(dest: String){
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: dest) as UIViewController

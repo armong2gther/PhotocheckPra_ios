@@ -32,7 +32,7 @@ class ReportViewController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     @IBAction func startDatePickerTapped(sender: AnyObject) {
-        DatePickerDialog().show(title: "เลือกวันที่เริ่มต้น", doneButtonTitle: "ยืนยัน", cancelButtonTitle: "ยกเลิก", datePickerMode: .date) {
+        DatePickerDialog().show("เลือกวันที่เริ่มต้น", doneButtonTitle: "ยืนยัน", cancelButtonTitle: "ยกเลิก", datePickerMode: .date) {
             (date) -> Void in
             let temp = "\(String(describing: date))"
             self.start_date.text = "\(temp.components(separatedBy: " ")[0].replacingOccurrences(of: "Optional(", with: ""))"
@@ -40,7 +40,7 @@ class ReportViewController: UIViewController,UITableViewDataSource,UITableViewDe
     }
     
     @IBAction func endDatePickerTapped(sender: AnyObject) {
-        DatePickerDialog().show(title: "เลือกวันที่สิ้นสุด", doneButtonTitle: "ยืนยัน", cancelButtonTitle: "ยกเลิก", datePickerMode: .date) {
+        DatePickerDialog().show("เลือกวันที่สิ้นสุด", doneButtonTitle: "ยืนยัน", cancelButtonTitle: "ยกเลิก", datePickerMode: .date) {
             (date) -> Void in
             let temp = "\(String(describing: date))"
             self.end_date.text = "\(temp.components(separatedBy: " ")[0].replacingOccurrences(of: "Optional(", with: ""))"

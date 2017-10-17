@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		028B0FFB0775EAC3C7F2765A /* Pods_PhotoCheckPra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D0394951A3AA9A1093907D /* Pods_PhotoCheckPra.framework */; };
+		667135351F96393F000F073A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 667135341F96393F000F073A /* GoogleService-Info.plist */; };
 		6E122F1E1F282ECD00E01E60 /* TransactionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F1D1F282ECD00E01E60 /* TransactionDetailViewController.swift */; };
 		6E122F211F28510000E01E60 /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F201F28510000E01E60 /* ReportTableViewCell.swift */; };
 		6E122F231F2868F000E01E60 /* PhotoOverDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E122F221F2868F000E01E60 /* PhotoOverDayViewController.swift */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		2009E5365287D5BBD386E30D /* Pods-PhotoCheckPra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoCheckPra.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoCheckPra/Pods-PhotoCheckPra.debug.xcconfig"; sourceTree = "<group>"; };
 		63D0394951A3AA9A1093907D /* Pods_PhotoCheckPra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoCheckPra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		667135341F96393F000F073A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6E122F1D1F282ECD00E01E60 /* TransactionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailViewController.swift; sourceTree = "<group>"; };
 		6E122F201F28510000E01E60 /* ReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
 		6E122F221F2868F000E01E60 /* PhotoOverDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoOverDayViewController.swift; sourceTree = "<group>"; };
@@ -183,11 +185,11 @@
 		6E3C2C921F1E813C0016B8E2 /* PhotoCheckPra */ = {
 			isa = PBXGroup;
 			children = (
-				6E3C2CAC1F1E81A50016B8E2 /* Supports */,
-				6E3C2CAA1F1E818B0016B8E2 /* Controller */,
-				6E3C2CA91F1E81860016B8E2 /* View */,
-				6E3C2CA81F1E81800016B8E2 /* Model */,
 				6E3C2C9D1F1E813C0016B8E2 /* Assets.xcassets */,
+				6E3C2CAA1F1E818B0016B8E2 /* Controller */,
+				6E3C2CA81F1E81800016B8E2 /* Model */,
+				6E3C2CAC1F1E81A50016B8E2 /* Supports */,
+				6E3C2CA91F1E81860016B8E2 /* View */,
 			);
 			path = PhotoCheckPra;
 			sourceTree = "<group>";
@@ -228,6 +230,7 @@
 		6E3C2CAC1F1E81A50016B8E2 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				667135341F96393F000F073A /* GoogleService-Info.plist */,
 				6E3C2CA21F1E813C0016B8E2 /* Info.plist */,
 				6E3C2C9A1F1E813C0016B8E2 /* PhotoCheckPra.xcdatamodeld */,
 			);
@@ -417,8 +420,7 @@
 				TargetAttributes = {
 					6E3C2C8F1F1E813C0016B8E2 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 5QD52GEJS3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -446,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E3C2CA11F1E813C0016B8E2 /* LaunchScreen.storyboard in Resources */,
+				667135351F96393F000F073A /* GoogleService-Info.plist in Resources */,
 				6E3C2C9E1F1E813C0016B8E2 /* Assets.xcassets in Resources */,
 				6E3C2C991F1E813C0016B8E2 /* Main.storyboard in Resources */,
 			);
@@ -466,7 +469,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4CBB225F7AC7ECD278C509DF /* [CP] Copy Pods Resources */ = {
@@ -673,11 +676,12 @@
 			baseConfigurationReference = 2009E5365287D5BBD386E30D /* Pods-PhotoCheckPra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5QD52GEJS3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PhotoCheckPra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "undefinded-naja.PhotoCheckPra";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iz.checkpra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -687,11 +691,12 @@
 			baseConfigurationReference = B0F9F7F47C17884538D9BDD1 /* Pods-PhotoCheckPra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5QD52GEJS3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = PhotoCheckPra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "undefinded-naja.PhotoCheckPra";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iz.checkpra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

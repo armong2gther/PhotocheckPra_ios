@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yuw-bO-zsM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yuw-bO-zsM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -47,19 +47,8 @@
                                     <action selector="facebook_auth:" destination="NVM-bY-DYc" eventType="touchUpInside" id="Nrh-ao-MDZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nng-vb-Wdw">
-                                <rect key="frame" x="16" y="385" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.87576007843017578" green="0.29377865791320801" blue="0.20560908317565918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Google Login">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="google_auth:" destination="NVM-bY-DYc" eventType="touchUpInside" id="z3c-KT-Hw2"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoQ-uK-Un1">
-                                <rect key="frame" x="16" y="452" width="343" height="30"/>
+                                <rect key="frame" x="16" y="448" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="สมัครสมาชิก">
@@ -86,14 +75,49 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.5" height="0.5"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZhH-um-D2i" customClass="GIDSignInButton">
+                                <rect key="frame" x="16" y="385" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.72431098090000001" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSb-nW-Gm3">
+                                <rect key="frame" x="158" y="562" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="User"/>
+                                <connections>
+                                    <action selector="userLogin:" destination="aaV-ed-HRm" eventType="touchUpInside" id="Qdg-ea-SxW"/>
+                                    <action selector="userLogin:" destination="NVM-bY-DYc" eventType="touchUpInside" id="bGs-ym-aIZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFj-eD-Amb">
+                                <rect key="frame" x="158" y="486" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Admin"/>
+                                <connections>
+                                    <action selector="adminLogin:" destination="aaV-ed-HRm" eventType="touchUpInside" id="hFl-HZ-jWW"/>
+                                    <action selector="adminLogin:" destination="NVM-bY-DYc" eventType="touchUpInside" id="vf9-ZF-phN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cr-l9-bZ6">
+                                <rect key="frame" x="158" y="524" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Checker"/>
+                                <connections>
+                                    <action selector="checkerLogin:" destination="NVM-bY-DYc" eventType="touchUpInside" id="JX4-4V-1RH"/>
+                                    <action selector="checkerLogin:" destination="aaV-ed-HRm" eventType="touchUpInside" id="eSC-TH-AL8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="UQj-Fb-xyv"/>
+                    <connections>
+                        <outlet property="btnGoogle" destination="ZhH-um-D2i" id="Ajp-is-fO5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpa-mG-MW4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3511.1999999999998" y="-758.77061469265368"/>
+            <point key="canvasLocation" x="3429.5999999999999" y="-759.67016491754134"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="nj3-kD-hJ2">
@@ -192,7 +216,7 @@
         <!--จัดการข้อมูลผู้ตรวจ-->
         <scene sceneID="1ka-JN-sYh">
             <objects>
-                <viewController id="gSQ-1m-rjs" customClass="CheckerManageViewController" customModule="PhotoCheckPra" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdminManager" id="gSQ-1m-rjs" customClass="CheckerManageViewController" customModule="PhotoCheckPra" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RZp-aG-aRu"/>
                         <viewControllerLayoutGuide type="bottom" id="41a-QJ-XL5"/>
@@ -647,7 +671,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Yuw-bO-zsM" kind="show" identifier="FirstView" id="qDe-dj-ZLE"/>
+                                            <segue destination="ja8-or-DG4" kind="push" id="ujW-8t-AVJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -775,7 +799,7 @@
             <objects>
                 <navigationController storyboardIdentifier="MainMenuNavigation" id="vpY-kE-hba" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="3ha-Jp-KWV"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="igo-YX-L0I">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="igo-YX-L0I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1046,9 +1070,9 @@
         <!--Navigation Controller-->
         <scene sceneID="nyq-89-4kL">
             <objects>
-                <navigationController storyboardIdentifier="AdminManager" automaticallyAdjustsScrollViewInsets="NO" id="t0d-GO-L0f" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AdminManager_nav" automaticallyAdjustsScrollViewInsets="NO" id="t0d-GO-L0f" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VtC-Da-IaZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="VtC-Da-IaZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2034,7 +2058,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Yuw-bO-zsM" kind="show" animates="NO" id="OQT-kE-yAr"/>
+                                            <segue destination="YnC-RF-DUS" kind="push" id="8ae-ur-Qam"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -2060,7 +2084,7 @@
             <objects>
                 <navigationController storyboardIdentifier="CheckerMenuNavigation" id="dNL-Fq-FFL" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="UBW-Jw-Xyq"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qim-eF-pFH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Qim-eF-pFH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2211,7 +2235,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Yuw-bO-zsM" kind="show" animates="NO" id="4dO-g3-OUV"/>
+                                            <segue destination="BRn-8h-n7Q" kind="push" id="iGL-D1-zNA"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -2235,7 +2259,7 @@
         <!--การส่งภาพ-->
         <scene sceneID="9cE-ys-Srg">
             <objects>
-                <viewController id="BRn-8h-n7Q" customClass="PhotoSenderViewController" customModule="PhotoCheckPra" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserManager" id="BRn-8h-n7Q" customClass="PhotoSenderViewController" customModule="PhotoCheckPra" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EJ9-eC-oPa"/>
                         <viewControllerLayoutGuide type="bottom" id="fK6-0y-G3g"/>
@@ -2607,7 +2631,7 @@
         <!--ภาพถ่ายรอตรวจสอบ-->
         <scene sceneID="7ae-qZ-yKY">
             <objects>
-                <viewController id="YnC-RF-DUS" customClass="PhotoStockViewController" customModule="PhotoCheckPra" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CheckerManager" id="YnC-RF-DUS" customClass="PhotoStockViewController" customModule="PhotoCheckPra" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="61o-Hj-6f1"/>
                         <viewControllerLayoutGuide type="bottom" id="GoB-TD-ohA"/>
@@ -2661,16 +2685,16 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="YnC-RF-DUS" id="eh3-ax-rQb"/>
-                                    <outlet property="delegate" destination="YnC-RF-DUS" id="muU-84-jox"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="ภาพถ่ายรอตรวจสอบ" id="2gi-et-GcI">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="Doh-Rk-TKb"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="Doh-Rk-TKb">
+                            <connections>
+                                <action selector="showMenu:" destination="YnC-RF-DUS" id="lnL-qq-ZeT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVB-ZB-tF7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2793,7 +2817,7 @@
             <objects>
                 <navigationController storyboardIdentifier="UserMenuNavigation" id="Osv-72-j6a" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eWm-d4-YCg"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hma-gm-DgH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hma-gm-DgH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2811,9 +2835,9 @@
         <!--Navigation Controller-->
         <scene sceneID="Xen-GP-8Ej">
             <objects>
-                <navigationController storyboardIdentifier="CheckerManager" automaticallyAdjustsScrollViewInsets="NO" id="IfD-Yd-uRI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CheckerManager_nav" automaticallyAdjustsScrollViewInsets="NO" id="IfD-Yd-uRI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wks-CU-7qO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wks-CU-7qO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2824,7 +2848,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nm4-Vs-bUP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4511" y="-1795"/>
+            <point key="canvasLocation" x="4712" y="-1756"/>
         </scene>
         <!--ภาพถ่ายที่รีวิว-->
         <scene sceneID="oMk-AK-hcD">
@@ -3512,9 +3536,9 @@
         <!--Navigation Controller-->
         <scene sceneID="58i-xr-RqH">
             <objects>
-                <navigationController storyboardIdentifier="UserManager" automaticallyAdjustsScrollViewInsets="NO" id="HRy-eZ-onQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="UserManager_nav" automaticallyAdjustsScrollViewInsets="NO" id="HRy-eZ-onQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OIq-qq-J23">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="OIq-qq-J23">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3525,7 +3549,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tTb-2e-9ts" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4511" y="-2579"/>
+            <point key="canvasLocation" x="4652" y="-2607"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tW3-go-A0X">
@@ -3533,7 +3557,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yuw-bO-zsM" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lwA-xb-7C6">
+                    <navigationItem key="navigationItem" id="Z9v-9V-28g"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lwA-xb-7C6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -3623,9 +3648,9 @@
         <image name="stars" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="iGL-D1-zNA"/>
+        <segue reference="ujW-8t-AVJ"/>
         <segue reference="Si8-XZ-vXi"/>
-        <segue reference="OQT-kE-yAr"/>
-        <segue reference="WLd-tE-MBG"/>
-        <segue reference="L4m-e3-Le7"/>
+        <segue reference="8ae-ur-Qam"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,17 +10,35 @@ import UIKit
 import IQKeyboardManagerSwift
 import CoreData
 
+import FacebookCore
+import Firebase
+import FirebaseAuth
+import GoogleSignIn
+
+
 let HOSTING_URL = "http://o.rmu.ac.th/checkpra/"
 let UPLOAD_URL = "http://o.rmu.ac.th/checkpra/bankref/"
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var facebookAppID = "fb344242575988251"
+    var googleAppID = "com.googleusercontent.apps.429308022473-as23c1fer2s0sqk2be68ablgmocchnsg"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         IQKeyboardManager.sharedManager().enable = true
+        
+        
+        SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        FirebaseApp.configure()
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        
         return true
     }
 
@@ -46,6 +64,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        if let strUrl: String = String(url.scheme!)
+        {
+            if strUrl.contains(facebookAppID)
+            {
+                return SDKApplicationDelegate.shared.application(app, open: url, options: options)
+            }
+            else if strUrl.contains(googleAppID)
+            {
+                return GIDSignIn.sharedInstance().handle(url,
+                                                         sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                         annotation: [:])
+            }
+        }
+        
+        return SDKApplicationDelegate.shared.application(app, open: url, options: options)
     }
 
     // MARK: - Core Data stack
@@ -95,3 +132,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+//MARK:- GIDSignInUIDelegate
+extension AppDelegate: GIDSignInDelegate
+{
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        
+        
+        if let error = error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                          accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (user, error) in
+            
+            if let user = Auth.auth().currentUser {
+                let name = user.displayName
+                let email = user.email
+                let photoUrl = user.photoURL
+                let uid = user.uid;  // The user's ID, unique to the Firebase project.
+                // Do NOT use this value to authenticate with
+                // your backend server, if you have one. Use
+                // getTokenWithCompletion:completion: instead.
+                
+//                SBCoreApi.sharedInstance().callApiLogin(authentication.accessToken,
+//                                                        strEmail: email!,
+//                                                        strConnectWith: "google",
+//                                                        strName: name!,
+//                                                        strPhotoUrl: String(describing: photoUrl),
+//                                                        strTokenFirebase: uid,
+//                                                        successCallback: {(ao) -> Void in
+//                                                            SwiftLoader.hide()
+//                                                            self.callApiLogin_success(ao)
+//                                                            
+//                }, failCallback: {(ao) -> Void in
+//                    SwiftLoader.hide()
+//                    print("failCallback")
+//                })
+            } else {
+                // No user is signed in.
+            }
+        }
+        
+        
+        if (signIn.hasAuthInKeychain()) {
+            NSLog("Signed in");
+        } else {
+            NSLog("Not signed in");
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
+    }
+    
+    func callApiLogin_success(_ ao:Any)
+    {
+        
+    }
+    
+}

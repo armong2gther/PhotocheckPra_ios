@@ -8,9 +8,14 @@
 
 import UIKit
 
+protocol MenuTableViewControllerDeleagte {
+    func selectLogoutApp()
+}
 
 class MenuTableViewController: UITableViewController {
 
+    var delegate: MenuTableViewControllerDeleagte?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
@@ -66,6 +71,10 @@ class MenuTableViewController: UITableViewController {
             }
             if(indexPath.row == 3){
                 print("logout")
+                if delegate != nil
+                {
+                    delegate?.selectLogoutApp()
+                }
                 //self.performSegue(withIdentifier: "unwindToDestinationViewControllerWithSender", sender: self)
                 //gotoDest(dest: "FirstView")
 //                dismiss(animated: true, completion: nil)
@@ -76,6 +85,7 @@ class MenuTableViewController: UITableViewController {
         }
         //dismiss(animated: true, completion: nil)
     }
+
     
     func gotoDest(dest: String){
         let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: dest) as UIViewController

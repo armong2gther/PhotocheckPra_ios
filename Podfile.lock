@@ -1,20 +1,88 @@
 PODS:
-  - Alamofire (4.5.0)
+  - Alamofire (4.4.0)
   - AnimatedTextInput (0.5.1)
-  - DatePickerDialog (1.1.7)
-  - IQKeyboardManagerSwift (4.0.10)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - DatePickerDialog (1.2)
+  - FacebookCore (0.2.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.15)
+  - FacebookLogin (0.2.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.2)
+    - FBSDKCoreKit (~> 4.15)
+    - FBSDKLoginKit (~> 4.15)
+  - FBSDKCoreKit (4.27.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.27.1):
+    - FBSDKCoreKit
+  - Firebase/Auth (4.3.0):
+    - Firebase/Core
+    - FirebaseAuth (= 4.2.1)
+  - Firebase/Core (4.3.0):
+    - FirebaseAnalytics (= 4.0.4)
+    - FirebaseCore (= 4.0.8)
+  - FirebaseAnalytics (4.0.4):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseAuth (4.2.1):
+    - FirebaseAnalytics (~> 4.0)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseCore (4.0.8):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseInstanceID (2.0.4)
+  - GoogleSignIn (4.0.2):
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
+    - GTMOAuth2 (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/Defines (2.1.3)
+  - GoogleToolboxForMac/NSData+zlib (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
+  - GTMOAuth2 (1.1.5):
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.1.12):
+    - GTMSessionFetcher/Full (= 1.1.12)
+  - GTMSessionFetcher/Core (1.1.12)
+  - GTMSessionFetcher/Full (1.1.12):
+    - GTMSessionFetcher/Core (= 1.1.12)
+  - IQKeyboardManagerSwift (4.0.13)
   - MMUploadImage (2.0.8)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
   - PullToRefreshSwift (3.0.3)
   - SCLAlertView (0.7.0)
-  - SideMenu (2.3.3)
+  - SideMenu (2.3.4)
   - SwiftCheckboxDialog (1.0.0)
   - SwiftyJSON (3.1.4)
   - UIImageViewModeScaleAspect (2.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.4)
+  - Alamofire (= 4.4.0)
   - AnimatedTextInput (~> 0.5)
   - DatePickerDialog (~> 1.1)
+  - FacebookCore (~> 0.2.0)
+  - FacebookLogin (~> 0.2.0)
+  - Firebase/Auth
+  - GoogleSignIn (= 4.0.2)
   - IQKeyboardManagerSwift (~> 4.0.8)
   - MMUploadImage (~> 2.0)
   - PullToRefreshSwift (~> 3.0)
@@ -25,18 +93,33 @@ DEPENDENCIES:
   - UIImageViewModeScaleAspect (~> 2.0)
 
 SPEC CHECKSUMS:
-  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   AnimatedTextInput: 0fde4c9c8d71dafc032b9b222531a788767536fb
-  DatePickerDialog: bd5e7e92e4da2c6a8966b28d5f5d8f335d6c2c63
-  IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  DatePickerDialog: 03a5f219dbce1a3679c67f8c4478ee04214711f1
+  FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
+  FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
+  FBSDKCoreKit: 03365dad5d790249196ffad8be4f6d8a2d98f932
+  FBSDKLoginKit: 66ff53b73cffd967ab773e32fac39e90a60e6d46
+  Firebase: 83283761a1ef6dc9846e03d08059f51421afbd65
+  FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
+  FirebaseAuth: d7f047fbeab98062b98ea933b8d934e0fb1190e2
+  FirebaseCore: 69b1a5ac5f857ba6d5fd9d5fe794f4786dd5e579
+  FirebaseInstanceID: 70c2b877e9338971b2429ea5a4293df6961aa44e
+  GoogleSignIn: d7ad83f13480e1f30453471d00d19b5293ac46af
+  GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  GTMOAuth2: be83fd28d63ae3087e7d351b1f39c1a7e24ab6e7
+  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
+  IQKeyboardManagerSwift: fb399c4cddcd8d9bbcd2d0c7c81ed290b61c088e
   MMUploadImage: 4f6908431ddfd7c27b2df4cb189517d5d9cefc82
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PullToRefreshSwift: 0743b818072bfd7c9464addc2d1b987b131057ca
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
-  SideMenu: a447554ae5c982e8077666389e1c8b0c8656e065
+  SideMenu: 2ea1a015d14ffb96110af43fe3232d995943e726
   SwiftCheckboxDialog: 961526e6a278298b2c7857cd4a5a1e7f034ddb6b
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   UIImageViewModeScaleAspect: 32c43b419b0762001d5e476a4af48c1fe875f60a
 
-PODFILE CHECKSUM: 03d4965f30a8065c76343c886651e75f71b4c1cd
+PODFILE CHECKSUM: f3f1238b726af80cc0992cb99edd4d1b9494209d
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.1.1

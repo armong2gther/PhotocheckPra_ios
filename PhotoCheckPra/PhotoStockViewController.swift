@@ -10,14 +10,27 @@ import UIKit
 import SideMenu
 import Alamofire
 import SwiftyJSON
+import FacebookCore
+import FacebookLogin
+import Firebase
+import FirebaseAuth
+import GoogleSignIn
 
 class PhotoStockViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupSideMenu()
+        
+        self.title = "CheckerManager"
+        self.navigationController?.isNavigationBarHidden = false
+        
+        setupSideMenu()
         //setDefaults()
-        // Do any additional setup after loading the view.
+        
+        if let vc = SideMenuManager.menuLeftNavigationController?.viewControllers[0] as? CheckerMenuTableViewController
+        {
+            vc.delegate = self
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,4 +68,37 @@ class PhotoStockViewController: UIViewController {
     }
     */
 
+    func logoutApp()
+    {
+        // ต้อง clear token facebook google
+        
+        let loginManager = LoginManager()
+        loginManager.logOut()
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        if let topController = self.parent
+        {
+            if let nc = topController as? UINavigationController
+            {
+                nc.popToRootViewController(animated: true)
+            }
+            
+        }
+    }
+    
+}
+
+extension PhotoStockViewController: CheckerMenuTableViewControllerDeleagte
+{
+    
+    func selectLogoutApp()
+    {
+        logoutApp()
+    }
 }

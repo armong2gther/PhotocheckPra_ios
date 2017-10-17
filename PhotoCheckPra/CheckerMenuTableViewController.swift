@@ -8,8 +8,14 @@
 
 import UIKit
 
+protocol CheckerMenuTableViewControllerDeleagte {
+    func selectLogoutApp()
+}
+
 class CheckerMenuTableViewController: UITableViewController {
 
+    var delegate: CheckerMenuTableViewControllerDeleagte?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
@@ -23,8 +29,10 @@ class CheckerMenuTableViewController: UITableViewController {
         if(indexPath.section == 1){
             if(indexPath.row == 5){
                 print("checker : logout")
-                dismiss(animated: true, completion: nil)
-                //gotoDest(dest: "FirstView")
+                if delegate != nil
+                {
+                    delegate?.selectLogoutApp()
+                }
             }
         }
     }
