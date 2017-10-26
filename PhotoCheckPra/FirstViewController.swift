@@ -31,6 +31,13 @@ class FirstViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        
+//        UIScreenEdgePanGestureRecognizer
+        for item in (self.navigationController?.view.subviews)!
+        {
+            print(item)
+        }
+        
     }
     
     override func viewDidLoad() {
@@ -179,6 +186,7 @@ class FirstViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    
     /*
     // MARK: - Navigation
 
@@ -258,6 +266,7 @@ extension FirstViewController: GIDSignInUIDelegate, GIDSignInDelegate
         // Perform any operations when the user disconnects from app here.
         // ...
     }
+    
     
 }
 

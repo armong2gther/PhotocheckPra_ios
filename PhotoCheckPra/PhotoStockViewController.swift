@@ -18,6 +18,8 @@ import GoogleSignIn
 
 class PhotoStockViewController: UIViewController {
 
+    fileprivate var panGestures: [UIScreenEdgePanGestureRecognizer]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +35,16 @@ class PhotoStockViewController: UIViewController {
         }
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        panGestures?.forEach({ (recognizer) in
+            recognizer.isEnabled = false
+        })
+        
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -43,7 +55,7 @@ class PhotoStockViewController: UIViewController {
         // MainMenuNavigation
         SideMenuManager.menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "CheckerMenuNavigation") as? UISideMenuNavigationController
         SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
+        panGestures = SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
         // Set up a cool background image for demo purposes
         SideMenuManager.menuAnimationBackgroundColor = UIColor(patternImage: UIImage(named: "bg")!)

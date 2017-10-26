@@ -22,6 +22,9 @@ class PhotoSenderViewController: UIViewController,UITableViewDataSource,UITableV
     
     @IBOutlet weak var useralbumTableview: UITableView!
     
+    fileprivate var panGestures: [UIScreenEdgePanGestureRecognizer]?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +47,15 @@ class PhotoSenderViewController: UIViewController,UITableViewDataSource,UITableV
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        panGestures?.forEach({ (recognizer) in
+             recognizer.isEnabled = false
+        })
+      
     }
     
     func reloadData(){
@@ -78,9 +90,7 @@ class PhotoSenderViewController: UIViewController,UITableViewDataSource,UITableV
         // MainMenuNavigation
         SideMenuManager.menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "UserMenuNavigation") as? UISideMenuNavigationController
         SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
-        
-       
+        panGestures = SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
         // Set up a cool background image for demo purposes
         SideMenuManager.menuAnimationBackgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
